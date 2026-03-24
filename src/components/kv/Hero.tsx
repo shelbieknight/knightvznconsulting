@@ -35,70 +35,78 @@ const Hero = ({ content }: HeroProps) => {
   }, []);
 
   return (
-    <div className="bg-background">
-      <header className="min-h-screen grid grid-cols-1 lg:grid-cols-[1fr_380px] relative overflow-hidden pt-[72px] container-kv">
-        {/* Ruled-paper lines */}
-        <div
-          className="absolute inset-0 z-0 pointer-events-none opacity-50"
-          style={{
-            backgroundImage: "linear-gradient(to bottom, transparent 71px, rgba(26,26,23,0.04) 71px, rgba(26,26,23,0.04) 72px, transparent 72px)",
-            backgroundSize: "100% 72px",
-          }}
-        />
+    <div className="bg-surface-dark relative overflow-hidden">
+      {/* Geometric grid background */}
+      <div className="absolute inset-0 geo-grid opacity-[0.04]" />
+      
+      {/* Large accent circle */}
+      <motion.div
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute -right-[300px] -top-[200px] w-[800px] h-[800px] rounded-full border-2 border-pop/[0.08] pointer-events-none hidden lg:block"
+      />
+      <motion.div
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 0.5 }}
+        transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute -right-[250px] -top-[150px] w-[600px] h-[600px] rounded-full border border-pop/[0.05] pointer-events-none hidden lg:block"
+      />
 
+      <header className="min-h-screen grid grid-cols-1 lg:grid-cols-[1fr_400px] relative pt-[72px] container-kv">
         {/* Left */}
         <div className="flex flex-col justify-center px-7 md:px-14 lg:px-20 py-16 lg:py-20 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="flex items-center gap-3.5 text-[13px] tracking-[0.18em] uppercase text-foreground mb-9 whitespace-nowrap"
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="flex items-center gap-3 text-[12px] tracking-[0.2em] uppercase font-semibold mb-10"
           >
-            <span className="w-8 h-px bg-gradient-to-r from-gold to-mid" />
-            <span>{content.kicker}</span>
+            <span className="w-10 h-[3px] bg-pop" />
+            <span className="text-pop">{content.kicker}</span>
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="font-serif text-[clamp(46px,5.5vw,80px)] font-normal leading-none tracking-[-0.02em] text-foreground"
+            className="font-display text-[clamp(48px,6vw,88px)] font-bold leading-[0.95] tracking-[-0.03em] text-primary-foreground [&_em]:not-italic [&_em]:text-pop"
             dangerouslySetInnerHTML={{ __html: content.h1 }}
           />
 
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="w-10 h-px bg-gold my-10"
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="w-16 h-1 bg-pop my-10 origin-left"
           />
 
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg leading-[1.8] text-muted-foreground max-w-[480px]"
+            transition={{ duration: 1, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="text-lg leading-[1.8] text-primary-foreground/60 max-w-[520px] [&_strong]:text-primary-foreground [&_strong]:font-semibold"
             dangerouslySetInnerHTML={{ __html: content.desc }}
           />
 
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
-            className="flex gap-7 items-center mt-12 lg:mt-14 flex-wrap"
+            transition={{ duration: 1, delay: 0.85, ease: [0.16, 1, 0.3, 1] }}
+            className="flex gap-6 items-center mt-12 lg:mt-14 flex-wrap"
           >
             <a
               href="#work"
-              className="inline-flex items-center gap-2.5 px-9 py-4 bg-foreground text-background text-[11px] tracking-[0.16em] uppercase font-medium no-underline hover:bg-foreground/85 hover:-translate-y-0.5 transition-all group"
+              className="inline-flex items-center gap-3 px-10 py-4 bg-pop text-accent-foreground text-[12px] tracking-[0.14em] uppercase font-bold no-underline hover:bg-pop-dark hover:-translate-y-1 hover:shadow-[0_12px_40px_-8px_hsl(var(--pop)/0.4)] transition-all duration-300 group"
             >
               {content.btnPrimary}
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="group-hover:translate-x-1 transition-transform">
-                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+              <svg width="16" height="16" viewBox="0 0 14 14" fill="none" className="group-hover:translate-x-1.5 transition-transform duration-300">
+                <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </a>
             <a
               href="#contact"
-              className="text-xs tracking-[0.14em] uppercase font-normal text-muted-foreground no-underline flex items-center gap-2 hover:text-foreground hover:gap-3.5 transition-all"
+              className="text-[12px] tracking-[0.14em] uppercase font-medium text-primary-foreground/50 no-underline flex items-center gap-2 hover:text-pop hover:gap-4 transition-all duration-300"
             >
               {content.btnGhost}
             </a>
@@ -107,53 +115,56 @@ const Hero = ({ content }: HeroProps) => {
 
         {/* Right — Photo Panel */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.4, delay: 0.5 }}
-          className="relative overflow-hidden bg-pale border-l border-border min-h-[60vh] lg:min-h-screen hidden lg:block"
+          initial={{ opacity: 0, x: 60 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          className="relative overflow-hidden min-h-[60vh] lg:min-h-screen hidden lg:block"
         >
+          {/* Accent border */}
+          <div className="absolute top-0 left-0 bottom-0 w-1 bg-pop z-20" />
+          
           <img
             src={heroPhoto}
             alt="Shelbie Knight"
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[320px] h-[68%] object-cover object-top"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[340px] h-[70%] object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
             width={640}
             height={960}
           />
-          {/* Fade overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-pale/90" />
+          {/* Dark gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/60 to-transparent" />
 
           {/* Stats */}
-          <div className="absolute top-9 left-9 flex flex-col gap-6 z-10">
+          <div className="absolute top-10 left-10 flex flex-col gap-7 z-10">
             {[
-              { label: "Years Experience" },
+              { label: "Years Exp." },
               { label: "Systems Built" },
-              { label: "Hrs/Wk Avg Saved" },
+              { label: "Hrs/Wk Saved" },
             ].map((stat, i) => (
-              <div key={i}>
+              <motion.div 
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 1 + i * 0.15 }}
+              >
                 <span
                   ref={(el) => { statRefs.current[i] = el; }}
-                  className="font-serif text-[38px] font-normal text-foreground leading-none"
+                  className="font-display text-[42px] font-bold text-primary-foreground leading-none metric-glow"
                 >
                   0
                 </span>
-                <div className="text-[12.5px] tracking-[0.16em] uppercase text-muted-foreground mt-1 font-normal">
+                <div className="text-[11px] tracking-[0.2em] uppercase text-primary-foreground/40 mt-1 font-medium">
                   {stat.label}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
-          {/* Vertical text */}
-          <span className="absolute right-5 top-1/2 rotate-90 -translate-x-1/2 origin-right text-xs tracking-[0.2em] uppercase text-foreground/30 whitespace-nowrap font-normal">
-            KnightVzn · Est. 2015
-          </span>
-
           {/* Identity block */}
-          <div className="absolute bottom-8 left-0 right-0 text-center z-10">
-            <div className="font-serif text-[22px] font-medium text-foreground tracking-wide">
+          <div className="absolute bottom-10 left-0 right-0 text-center z-10">
+            <div className="font-display text-[22px] font-bold text-primary-foreground tracking-wide">
               Shelbie Knight
             </div>
-            <div className="text-[11px] tracking-[0.22em] uppercase text-muted-foreground mt-1">
+            <div className="text-[11px] tracking-[0.22em] uppercase text-pop font-semibold mt-1">
               Marketing & Operations Automation
             </div>
           </div>

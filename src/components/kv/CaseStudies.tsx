@@ -1,13 +1,17 @@
 import AnimatedSection from "./AnimatedSection";
 import { PersonaContent } from "../kv/personaData";
+import { motion } from "framer-motion";
 
 interface CaseStudiesProps {
   cases: PersonaContent["cases"];
 }
 
 const CaseStudies = ({ cases }: CaseStudiesProps) => (
-  <section id="work" className="section-pad bg-background">
-    <div className="container-kv">
+  <section id="work" className="section-pad bg-background relative overflow-hidden">
+    {/* Geometric bg */}
+    <div className="absolute left-0 top-0 w-[300px] h-[300px] border border-pop/[0.04] rotate-45 -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden lg:block" />
+
+    <div className="container-kv relative z-10">
       {/* Header */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-end mb-14 lg:mb-[72px]">
         <div>
@@ -15,56 +19,59 @@ const CaseStudies = ({ cases }: CaseStudiesProps) => (
             <div className="eyebrow mb-7">Results</div>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <h2 className="font-serif text-[clamp(42px,4.5vw,66px)] font-normal leading-[1.06] tracking-[-0.015em] text-foreground">
-              What it looks like<br />when it's <em className="italic">done right.</em>
+            <h2 className="font-display text-[clamp(40px,4.5vw,64px)] font-bold leading-[0.98] tracking-[-0.03em] text-foreground">
+              What it looks like
+              <br />when it's <span className="text-pop">done right.</span>
             </h2>
           </AnimatedSection>
         </div>
         <AnimatedSection delay={0.15}>
-          <p className="text-[17px] leading-[1.8] text-muted-foreground font-light self-end">
-            Real engagements. Specific problems. Measurable outcomes. No hypothetical case studies — these are systems that are running right now.
+          <p className="text-[16px] leading-[1.8] text-muted-foreground self-end">
+            Real engagements. Specific problems. Measurable outcomes. No hypothetical case studies — these are systems running right now.
           </p>
         </AnimatedSection>
       </div>
 
       {/* Case items */}
-      <div className="flex flex-col gap-0.5">
+      <div className="flex flex-col gap-4">
         {cases.map((c, i) => (
           <AnimatedSection key={i} delay={0.1 * i}>
-            <div className="grid grid-cols-1 md:grid-cols-[64px_1fr_160px] gap-6 md:gap-12 items-center p-8 md:p-11 bg-pale border-l-2 border-transparent hover:bg-pale/70 hover:border-l-gold transition-all cursor-default group relative">
+            <motion.div 
+              whileHover={{ x: 8 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="grid grid-cols-1 md:grid-cols-[64px_1fr_180px] gap-6 md:gap-10 items-center p-8 md:p-10 bg-surface-elevated border border-border hover:border-pop/30 transition-all cursor-default group relative overflow-hidden"
+            >
+              {/* Top accent */}
+              <div className="absolute top-0 left-0 w-1 h-full bg-transparent group-hover:bg-pop transition-colors duration-300" />
+
               {/* Number */}
-              <span className="hidden md:block font-serif text-[44px] font-normal text-foreground/10 leading-none group-hover:text-foreground/25 transition-colors">
+              <span className="hidden md:block font-display text-[48px] font-bold text-foreground/[0.06] leading-none group-hover:text-pop/20 transition-colors">
                 {String(i + 1).padStart(2, "0")}
               </span>
 
               {/* Content */}
               <div>
-                <span className="text-[12.5px] tracking-[0.14em] uppercase text-muted-foreground border border-border px-2.5 py-1 inline-block mb-2.5 font-normal">
+                <span className="text-[11px] tracking-[0.14em] uppercase text-pop font-bold border border-pop/20 bg-pop/[0.06] px-3 py-1 inline-block mb-3">
                   {c.tag}
                 </span>
-                <h3 className="font-serif text-2xl font-medium text-foreground leading-tight mb-2 tracking-[-0.01em]">
+                <h3 className="font-display text-xl font-bold text-foreground leading-tight mb-2 tracking-[-0.01em]">
                   {c.title}
                 </h3>
-                <p className="text-[15px] text-muted-foreground leading-[1.65] font-light">
+                <p className="text-[14px] text-muted-foreground leading-[1.65]">
                   {c.desc}
                 </p>
               </div>
 
               {/* Metric */}
               <div className="text-left md:text-right">
-                <div className="font-serif text-[46px] font-normal text-foreground leading-none">
+                <div className="font-display text-[52px] font-bold text-pop leading-none metric-glow">
                   {c.metric}
                 </div>
-                <div className="text-[12.5px] tracking-[0.12em] uppercase text-muted-foreground mt-1 font-normal">
+                <div className="text-[11px] tracking-[0.14em] uppercase text-muted-foreground mt-1 font-semibold">
                   {c.metricLabel}
                 </div>
               </div>
-
-              {/* Arrow */}
-              <span className="absolute right-8 md:right-12 top-1/2 -translate-y-1/2 text-gold opacity-0 group-hover:opacity-100 group-hover:right-9 transition-all text-lg">
-                →
-              </span>
-            </div>
+            </motion.div>
           </AnimatedSection>
         ))}
       </div>

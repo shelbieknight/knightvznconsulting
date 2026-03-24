@@ -1,4 +1,5 @@
 import AnimatedSection from "./AnimatedSection";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -22,48 +23,54 @@ const testimonials = [
 ];
 
 const Testimonials = () => (
-  <section id="testimonials" className="section-pad bg-foreground">
-    <div className="container-kv">
+  <section id="testimonials" className="section-pad bg-surface-dark relative overflow-hidden">
+    {/* Geometric accent */}
+    <div className="absolute right-0 bottom-0 w-[400px] h-[400px] border border-pop/[0.05] rotate-45 translate-x-1/2 translate-y-1/2 pointer-events-none hidden lg:block" />
+
+    <div className="container-kv relative z-10">
       {/* Header */}
       <div className="flex items-end justify-between mb-14 lg:mb-[72px]">
         <div>
           <AnimatedSection>
-            <div className="eyebrow mb-7 before:bg-gold text-background/65">Client Voices</div>
+            <div className="eyebrow mb-7">Client Voices</div>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
-            <h2 className="font-serif text-[clamp(42px,4.5vw,64px)] font-normal leading-[1.06] tracking-[-0.015em] text-background">
-              What clients say<br />about working with <em className="italic">Shelbie.</em>
+            <h2 className="font-display text-[clamp(40px,4.5vw,64px)] font-bold leading-[0.98] tracking-[-0.03em] text-primary-foreground">
+              What clients say
+              <br />about working with <span className="text-pop">Shelbie.</span>
             </h2>
           </AnimatedSection>
         </div>
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-background/[0.06]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {testimonials.map((t, i) => (
           <AnimatedSection key={i} delay={0.1 * i}>
-            <div className="bg-foreground p-10 lg:p-12 relative border-b-2 border-transparent hover:border-b-gold hover:bg-foreground/95 transition-all h-full flex flex-col">
-              {/* Quote mark */}
-              <span className="absolute top-7 left-8 font-serif text-[80px] font-normal leading-[0.8] text-background/[0.06]">
-                "
-              </span>
+            <motion.div
+              whileHover={{ y: -8 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="bg-primary-foreground/[0.04] border border-primary-foreground/[0.08] p-9 lg:p-10 relative hover:border-pop/30 transition-colors h-full flex flex-col"
+            >
+              {/* Quote accent */}
+              <div className="w-8 h-1 bg-pop mb-6" />
 
-              <div className="text-[#D4A853] tracking-[3px] text-sm mb-6">★★★★★</div>
+              <div className="text-pop tracking-[4px] text-sm mb-5 font-bold">★★★★★</div>
 
-              <p className="font-serif text-xl italic font-normal leading-[1.65] text-background/70 mb-9 relative z-10 flex-1">
-                {t.quote}
+              <p className="text-[15px] leading-[1.75] text-primary-foreground/60 mb-8 relative z-10 flex-1">
+                "{t.quote}"
               </p>
 
               <div className="flex items-center gap-3.5">
-                <div className="w-[42px] h-[42px] rounded-full bg-gradient-to-br from-gold to-gold/30 flex items-center justify-center font-serif text-[15px] font-medium text-foreground flex-shrink-0">
+                <div className="w-11 h-11 bg-pop flex items-center justify-center font-display text-sm font-bold text-accent-foreground flex-shrink-0">
                   {t.initials}
                 </div>
                 <div>
-                  <div className="text-[15px] font-medium text-background">{t.name}</div>
-                  <div className="text-xs text-background/60 mt-0.5 tracking-wide">{t.role}</div>
+                  <div className="text-[14px] font-bold text-primary-foreground font-display">{t.name}</div>
+                  <div className="text-[12px] text-primary-foreground/40 mt-0.5 tracking-wide font-medium">{t.role}</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </AnimatedSection>
         ))}
       </div>
