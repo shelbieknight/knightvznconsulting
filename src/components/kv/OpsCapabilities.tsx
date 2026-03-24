@@ -11,7 +11,7 @@ const opsCards = [
   {
     icon: "🔗",
     title: "Tool Integration",
-    desc: "CRM, project management, billing, email — connected into one system that syncs automatically.",
+    desc: "CRM, project management, billing, email. Connected into one system that syncs automatically.",
     tags: ["CRM Sync", "API", "Webhooks"],
   },
   {
