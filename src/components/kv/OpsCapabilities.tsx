@@ -5,7 +5,7 @@ const opsCards = [
   {
     icon: "⚙️",
     title: "Workflow Automation",
-    desc: "Repetitive processes handled automatically — approvals, handoffs, notifications, data entry.",
+    desc: "Repetitive processes handled automatically: approvals, handoffs, notifications, data entry.",
     tags: ["Zapier", "Make", "n8n", "Custom"],
   },
   {
