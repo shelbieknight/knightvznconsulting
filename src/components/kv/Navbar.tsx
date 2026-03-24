@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import kvLogo from "@/assets/kv-logo.png";
 
 const navLinks = [
   { label: "About", href: "#about" },
