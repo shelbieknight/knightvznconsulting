@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
-import heroPhoto from "@/assets/hero-photo.jpg";
+import heroPhoto from "@/assets/shelbie-headshot.jpg";
 import { PersonaContent } from "./personaData";
 
 interface HeroProps {
