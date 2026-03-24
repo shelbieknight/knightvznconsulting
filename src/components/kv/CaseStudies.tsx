@@ -8,11 +8,7 @@ interface CaseStudiesProps {
 
 const CaseStudies = ({ cases }: CaseStudiesProps) => (
   <section id="work" className="section-pad bg-background relative overflow-hidden">
-    {/* Geometric bg */}
-    <div className="absolute left-0 top-0 w-[300px] h-[300px] border border-pop/[0.04] rotate-45 -translate-x-1/2 -translate-y-1/2 pointer-events-none hidden lg:block" />
-
     <div className="container-kv relative z-10">
-      {/* Header */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-end mb-14 lg:mb-[72px]">
         <div>
           <AnimatedSection>
@@ -21,7 +17,7 @@ const CaseStudies = ({ cases }: CaseStudiesProps) => (
           <AnimatedSection delay={0.1}>
             <h2 className="font-display text-[clamp(40px,4.5vw,64px)] font-bold leading-[0.98] tracking-[-0.03em] text-foreground">
               What it looks like
-              <br />when it's <span className="text-pop">done right.</span>
+              <br />when it's <span className="text-gradient">done right.</span>
             </h2>
           </AnimatedSection>
         </div>
@@ -32,26 +28,20 @@ const CaseStudies = ({ cases }: CaseStudiesProps) => (
         </AnimatedSection>
       </div>
 
-      {/* Case items */}
       <div className="flex flex-col gap-4">
         {cases.map((c, i) => (
           <AnimatedSection key={i} delay={0.1 * i}>
-            <motion.div 
+            <motion.div
               whileHover={{ x: 8 }}
               transition={{ type: "spring", stiffness: 300 }}
               className="grid grid-cols-1 md:grid-cols-[64px_1fr_180px] gap-6 md:gap-10 items-center p-8 md:p-10 bg-surface-elevated border border-border hover:border-pop/30 transition-all cursor-default group relative overflow-hidden"
             >
-              {/* Top accent */}
               <div className="absolute top-0 left-0 w-1 h-full bg-transparent group-hover:bg-pop transition-colors duration-300" />
-
-              {/* Number */}
               <span className="hidden md:block font-display text-[48px] font-bold text-foreground/[0.06] leading-none group-hover:text-pop/20 transition-colors">
                 {String(i + 1).padStart(2, "0")}
               </span>
-
-              {/* Content */}
               <div>
-                <span className="text-[11px] tracking-[0.14em] uppercase text-pop font-bold border border-pop/20 bg-pop/[0.06] px-3 py-1 inline-block mb-3">
+                <span className="text-[11px] tracking-[0.14em] uppercase text-electric font-bold border border-electric/20 bg-electric/[0.06] px-3 py-1 inline-block mb-3">
                   {c.tag}
                 </span>
                 <h3 className="font-display text-xl font-bold text-foreground leading-tight mb-2 tracking-[-0.01em]">
@@ -61,8 +51,6 @@ const CaseStudies = ({ cases }: CaseStudiesProps) => (
                   {c.desc}
                 </p>
               </div>
-
-              {/* Metric */}
               <div className="text-left md:text-right">
                 <div className="font-display text-[52px] font-bold text-pop leading-none metric-glow">
                   {c.metric}

@@ -2,7 +2,7 @@ const Footer = () => (
   <footer className="bg-surface-dark px-5 md:px-12 lg:px-20 py-12 lg:py-14 border-t border-primary-foreground/[0.06]">
     <div className="container-kv grid grid-cols-1 lg:grid-cols-3 items-center gap-10 text-center lg:text-left">
       <a href="/" className="no-underline flex items-center gap-3 justify-center lg:justify-start">
-        <div className="w-8 h-8 bg-pop flex items-center justify-center flex-shrink-0">
+        <div className="w-8 h-8 flex items-center justify-center flex-shrink-0" style={{ background: "var(--gradient-primary)" }}>
           <span className="font-display text-sm font-bold text-accent-foreground">K</span>
         </div>
         <div>

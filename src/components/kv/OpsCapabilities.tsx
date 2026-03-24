@@ -30,11 +30,7 @@ const opsCards = [
 
 const OpsCapabilities = () => (
   <section id="ops-capabilities" className="section-pad bg-background relative overflow-hidden">
-    {/* Diagonal accent stripe */}
-    <div className="absolute top-0 right-0 w-[200px] h-full bg-pop/[0.02] -skew-x-12 origin-top-right pointer-events-none hidden lg:block" />
-
     <div className="container-kv relative z-10">
-      {/* Header */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-end mb-16 lg:mb-20">
         <div>
           <AnimatedSection>
@@ -44,7 +40,7 @@ const OpsCapabilities = () => (
             <h2 className="font-display text-[clamp(40px,4.5vw,64px)] font-bold leading-[0.98] tracking-[-0.03em] text-foreground">
               The manual work
               <br />your team has
-              <br /><span className="text-pop">gotten used to.</span>
+              <br /><span className="text-gradient">gotten used to.</span>
             </h2>
           </AnimatedSection>
         </div>
@@ -55,18 +51,14 @@ const OpsCapabilities = () => (
         </AnimatedSection>
       </div>
 
-      {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {opsCards.map((card, i) => (
           <AnimatedSection key={card.title} delay={0.1 * i}>
-            <motion.div 
+            <motion.div
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
               className="bg-surface-elevated border border-border p-9 lg:p-10 flex flex-col gap-4 hover:border-pop/30 transition-colors cursor-default group h-full relative overflow-hidden"
             >
-              {/* Corner accent */}
-              <div className="absolute bottom-0 right-0 w-20 h-20 bg-pop/[0.04] translate-x-1/2 translate-y-1/2 rotate-45 group-hover:bg-pop/[0.1] transition-colors" />
-              
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 flex-shrink-0 bg-pop/10 border border-pop/20 flex items-center justify-center text-lg group-hover:bg-pop/20 transition-all">
                   {card.icon}
