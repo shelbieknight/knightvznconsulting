@@ -13,7 +13,7 @@ const faqItems = [
   },
   {
     q: "How quickly will I actually see a difference?",
-    a: "The audit week usually turns up a few things you can do right away. On the operations side, people typically get meaningful time back within the first couple weeks. Marketing takes longer — pipeline results typically show up between 30 and 60 days.",
+    a: "The audit week usually turns up a few things you can do right away. On the operations side, people typically get meaningful time back within the first couple weeks. Marketing takes longer. Pipeline results typically show up between 30 and 60 days.",
   },
   {
     q: "I'm not technical. Will I actually be able to use and maintain this?",

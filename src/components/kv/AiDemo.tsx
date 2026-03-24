@@ -21,7 +21,7 @@ const AiDemo = () => (
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <p className="text-[16px] leading-[1.85] text-primary-foreground/50 mb-10">
-              Every engagement starts with a full audit — I map your marketing funnel, your operations, every manual step your team is taking. Then I build the systems that eliminate the repetitive work. The typical timeline is 2–6 weeks from audit to live systems.
+              Every engagement starts with a full audit. I map your marketing funnel, your operations, every manual step your team is taking. Then I build the systems that eliminate the repetitive work. The typical timeline is 2–6 weeks from audit to live systems.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.3}>

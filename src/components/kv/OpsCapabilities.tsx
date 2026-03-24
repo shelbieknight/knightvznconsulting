@@ -17,7 +17,7 @@ const opsCards = [
   {
     icon: "📊",
     title: "Automated Reporting",
-    desc: "Pull data from every platform, format it, send it — automatically. Real-time dashboards nobody has to build.",
+    desc: "Pull data from every platform, format it, send it. Automatically. Real-time dashboards nobody has to build.",
     tags: ["Dashboards", "KPIs", "Auto-Send"],
   },
   {

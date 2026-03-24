@@ -9,7 +9,7 @@ const testimonials = [
     initials: "JL",
   },
   {
-    quote: "I was the one doing all the lead follow-up. Manually. At 11pm. Shelbie built a system that does it better than I ever did — and I haven't touched a follow-up email in four months.",
+    quote: "I was the one doing all the lead follow-up. Manually. At 11pm. Shelbie built a system that does it better than I ever did, and I haven't touched a follow-up email in four months.",
     name: "Marcus R.",
     role: "Founder, Retail SMB",
     initials: "MR",

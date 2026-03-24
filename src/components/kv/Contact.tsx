@@ -166,7 +166,7 @@ const Contact = () => {
                     : "bg-foreground text-background hover:bg-foreground/90 hover:-translate-y-1"
                 }`}
               >
-                {submitted ? "✓ Message received — Shelbie will be in touch!" : (
+                {submitted ? "✓ Message received. Shelbie will be in touch!" : (
                   <>
                     Send Message
                     <svg width="16" height="16" viewBox="0 0 14 14" fill="none">

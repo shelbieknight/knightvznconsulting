@@ -48,7 +48,7 @@ const About = () => (
                 <strong className="text-foreground font-semibold">I fix that.</strong> I've spent 10+ years building marketing and operations systems that actually run. AI-powered automation, connected workflows, and infrastructure that doesn't depend on someone remembering to do the thing.
               </p>
               <p className="text-[16px] leading-[1.85] text-muted-foreground">
-                <strong className="text-foreground font-semibold">Every engagement is built personally by me</strong> — no junior handoffs, no strategy decks your team has to figure out on their own. You get the system, running, documented, and done.
+                <strong className="text-foreground font-semibold">Every engagement is built personally by me.</strong> No junior handoffs, no strategy decks your team has to figure out on their own. You get the system, running, documented, and done.
               </p>
             </div>
           </AnimatedSection>
