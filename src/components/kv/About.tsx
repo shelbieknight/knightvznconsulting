@@ -45,7 +45,7 @@ const About = () => (
                 Most marketing systems are held together by manual effort and good intentions. Someone sends the follow-up when they remember to. Someone updates the spreadsheet because nobody else will. The report gets built every Monday because it has to, even though the data already exists in three different tools.
               </p>
               <p className="text-[16px] leading-[1.85] text-muted-foreground">
-                <strong className="text-foreground font-semibold">I fix that.</strong> I've spent 10+ years building marketing and operations systems that actually run — AI-powered automation, connected workflows, and infrastructure that doesn't depend on someone remembering to do the thing.
+                <strong className="text-foreground font-semibold">I fix that.</strong> I've spent 10+ years building marketing and operations systems that actually run. AI-powered automation, connected workflows, and infrastructure that doesn't depend on someone remembering to do the thing.
               </p>
               <p className="text-[16px] leading-[1.85] text-muted-foreground">
                 <strong className="text-foreground font-semibold">Every engagement is built personally by me</strong> — no junior handoffs, no strategy decks your team has to figure out on their own. You get the system, running, documented, and done.
