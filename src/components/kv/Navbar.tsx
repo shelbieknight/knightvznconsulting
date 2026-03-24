@@ -27,9 +27,7 @@ const Navbar = () => {
       }`}
     >
       <a href="/" className="flex items-center gap-3 no-underline group">
-        <div className="w-8 h-8 flex items-center justify-center" style={{ background: "var(--gradient-primary)" }}>
-          <span className="font-display text-sm font-bold text-accent-foreground">K</span>
-        </div>
+        <img src={kvLogo} alt="KnightVzn logo" className="w-9 h-9 object-contain invert" />
         <div className="flex flex-col gap-0">
           <span className={`font-display text-lg font-bold tracking-wide ${scrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
             KnightVzn
