@@ -4,7 +4,7 @@ const features = [
   {
     num: "01",
     title: "AI Marketing Automation",
-    desc: "Lead capture, nurture sequences, behavioral triggers — built as one connected system that runs 24/7.",
+    desc: "Lead capture, nurture sequences, and behavioral triggers, all built as one connected system that runs 24/7.",
   },
   {
     num: "02",
