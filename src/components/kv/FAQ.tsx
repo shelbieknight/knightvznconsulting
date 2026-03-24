@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqItems = [
   {
     q: "I'm manually doing follow-up, reporting, and onboarding. Is that really automatable?",
-    a: "Yes, and those three specifically come up constantly. Behavioral follow-up sequences, auto-generated reports, deal-triggered onboarding — these are usually the first things built because the ROI is obvious and the time savings show up immediately.",
+    a: "Yes, and those three specifically come up constantly. Behavioral follow-up sequences, auto-generated reports, deal-triggered onboarding. These are usually the first things built because the ROI is obvious and the time savings show up immediately.",
   },
   {
     q: "My team uses 6 different tools and none of them talk to each other. Can that be fixed?",
@@ -13,7 +13,7 @@ const faqItems = [
   },
   {
     q: "How quickly will I actually see a difference?",
-    a: "The audit week usually turns up a few things you can do right away. On the operations side, people typically get meaningful time back within the first couple weeks. Marketing takes longer — pipeline results typically show up between 30 and 60 days.",
+    a: "The audit week usually turns up a few things you can do right away. On the operations side, people typically get meaningful time back within the first couple weeks. Marketing takes longer. Pipeline results typically show up between 30 and 60 days.",
   },
   {
     q: "I'm not technical. Will I actually be able to use and maintain this?",

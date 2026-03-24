@@ -19,7 +19,7 @@ export const personaData: Record<string, PersonaContent> = {
   default: {
     kicker: "AI Marketing · Operations · Lead Generation",
     h1: "Your business<br/>shouldn't run<br/><em>on manual.</em>",
-    desc: "I'm <strong>Shelbie Knight</strong>. If you're still the one doing follow-up by hand, your tools don't talk to each other, and half your week goes to work that should happen automatically — that's what I fix. I build <strong>AI-powered marketing and operations systems</strong> so the business runs without you in the middle of it.",
+    desc: "I'm <strong>Shelbie Knight</strong>. If you're still the one doing follow-up by hand, your tools don't talk to each other, and half your week goes to work that should happen automatically, that's what I fix. I build <strong>AI-powered marketing and operations systems</strong> so the business runs without you in the middle of it.",
     btnPrimary: "See the Results",
     btnGhost: "Find Out What I'd Automate First →",
     cases: [
@@ -40,7 +40,7 @@ export const personaData: Record<string, PersonaContent> = {
       {
         tag: "AI Lead Generation · B2B Startup",
         title: "Automated Outreach System Grew Pipeline 5× in One Quarter",
-        desc: "The team was doing prospecting by hand — some leads got follow-up, most didn't. Built a connected pipeline: targeted outreach, lead scoring, and nurture. Pipeline grew 5× in the first quarter. No new headcount.",
+        desc: "The team was doing prospecting by hand. Some leads got follow-up, most didn't. Built a connected pipeline: targeted outreach, lead scoring, and nurture. Pipeline grew 5× in the first quarter. No new headcount.",
         metric: "5×",
         metricLabel: "Pipeline Growth",
       },
@@ -49,14 +49,14 @@ export const personaData: Record<string, PersonaContent> = {
   startup: {
     kicker: "For Startup Founders · Scale Without Headcount",
     h1: "You're the one<br/>doing it all.<br/><em>That's the problem.</em>",
-    desc: "I'm <strong>Shelbie Knight</strong>. You're building a company and running all its systems at the same time — manually following up on leads, onboarding clients, pulling reports. I build <strong>AI-powered marketing and operations systems</strong> that handle that work automatically, so you can get your time back without hiring for every problem.",
+    desc: "I'm <strong>Shelbie Knight</strong>. You're building a company and running all its systems at the same time. Manually following up on leads, onboarding clients, pulling reports. I build <strong>AI-powered marketing and operations systems</strong> that handle that work automatically, so you can get your time back without hiring for every problem.",
     btnPrimary: "See What I've Built for Founders",
     btnGhost: "Find Out What I'd Automate First →",
     cases: [
       {
         tag: "AI Marketing Automation · SaaS Startup",
         title: "Founder Replaced 20 Hours of Manual Marketing With One Automated Funnel",
-        desc: "The founder was personally managing email follow-up, lead scoring, and nurture — all manually. Built a fully automated marketing funnel. 20 hours a week back in the first month.",
+        desc: "The founder was personally managing email follow-up, lead scoring, and nurture. All manually. Built a fully automated marketing funnel. 20 hours a week back in the first month.",
         metric: "20h",
         metricLabel: "Back Per Week",
       },
@@ -79,13 +79,13 @@ export const personaData: Record<string, PersonaContent> = {
   smbs: {
     kicker: "For SMB Owners · Operations That Run Themselves",
     h1: "Your business runs<br/>on your team's<br/><em>manual effort.</em>",
-    desc: "I'm <strong>Shelbie Knight</strong>. Your team is doing work that systems should be handling — tools that don't connect, reports someone pulls every week, onboarding that requires three people every time. I build <strong>AI-powered operations and marketing automation</strong> that gives your team their time back.",
+    desc: "I'm <strong>Shelbie Knight</strong>. Your team is doing work that systems should be handling. Tools that don't connect, reports someone pulls every week, onboarding that requires three people every time. I build <strong>AI-powered operations and marketing automation</strong> that gives your team their time back.",
     btnPrimary: "See How It Works for SMBs",
     btnGhost: "Find Out What I'd Automate First →",
     cases: [
       {
         tag: "Operations Automation · SMB (45 employees)",
-        title: "Disconnected Tool Stack Unified — 22 Hours of Weekly Manual Work Eliminated",
+        title: "Disconnected Tool Stack Unified: 22 Hours of Weekly Manual Work Eliminated",
         desc: "The ops team had a CRM, project tool, invoicing system, and reporting dashboard that had never been connected. Connected the full stack and automated the data flows. 22 hours of manual work per week eliminated.",
         metric: "22h",
         metricLabel: "Saved Per Week",
@@ -109,7 +109,7 @@ export const personaData: Record<string, PersonaContent> = {
   marketing: {
     kicker: "For Marketing Teams · Strategy + Automation · Prove Your ROI",
     h1: "Your team is doing<br/>execution work.<br/><em>Strategy is suffering.</em>",
-    desc: "I'm <strong>Shelbie Knight</strong>. Your team is smart and capable — but they're spending most of their time on manual follow-up, rebuilding the same reports, and managing campaigns that should run themselves. I build the <strong>marketing systems and strategy</strong> that free your team to do the work that actually moves the business.",
+    desc: "I'm <strong>Shelbie Knight</strong>. Your team is smart and capable, but they're spending most of their time on manual follow-up, rebuilding the same reports, and managing campaigns that should run themselves. I build the <strong>marketing systems and strategy</strong> that free your team to do the work that actually moves the business.",
     btnPrimary: "See What I've Built for Marketing Teams",
     btnGhost: "Find Out What I'd Automate First →",
     cases: [

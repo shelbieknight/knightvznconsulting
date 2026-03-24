@@ -16,7 +16,7 @@ const services = [
   {
     num: "03",
     title: "AI Lead Generation & Website Builds",
-    desc: "Targeted outreach, lead scoring, nurture sequences, CRM sync, and conversion-ready websites — one end-to-end pipeline from first touch to closed deal.",
+    desc: "Targeted outreach, lead scoring, nurture sequences, CRM sync, and conversion-ready websites. One end-to-end pipeline from first touch to closed deal.",
     tags: ["Outreach", "Lead Scoring", "CRM Sync", "Website Builds"],
   },
   {
@@ -64,7 +64,7 @@ const Services = () => (
         </div>
         <AnimatedSection delay={0.15}>
           <p className="text-[16px] leading-[1.8] text-primary-foreground/50 self-end">
-            Every engagement starts with understanding where time goes. Then I build the systems that get it back — connected, automated, and documented.
+            Every engagement starts with understanding where time goes. Then I build the systems that get it back. Connected, automated, and documented.
           </p>
         </AnimatedSection>
       </div>

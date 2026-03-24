@@ -5,19 +5,19 @@ const opsCards = [
   {
     icon: "⚙️",
     title: "Workflow Automation",
-    desc: "Repetitive processes handled automatically — approvals, handoffs, notifications, data entry.",
+    desc: "Repetitive processes handled automatically: approvals, handoffs, notifications, data entry.",
     tags: ["Zapier", "Make", "n8n", "Custom"],
   },
   {
     icon: "🔗",
     title: "Tool Integration",
-    desc: "CRM, project management, billing, email — connected into one system that syncs automatically.",
+    desc: "CRM, project management, billing, email. Connected into one system that syncs automatically.",
     tags: ["CRM Sync", "API", "Webhooks"],
   },
   {
     icon: "📊",
     title: "Automated Reporting",
-    desc: "Pull data from every platform, format it, send it — automatically. Real-time dashboards nobody has to build.",
+    desc: "Pull data from every platform, format it, send it. Automatically. Real-time dashboards nobody has to build.",
     tags: ["Dashboards", "KPIs", "Auto-Send"],
   },
   {

@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    quote: "We were doing every client onboarding manually. Shelbie rebuilt the whole thing in three weeks. It now runs without anyone touching it — and we onboard twice as many clients with the same team.",
+    quote: "We were doing every client onboarding manually. Shelbie rebuilt the whole thing in three weeks. It now runs without anyone touching it, and we onboard twice as many clients with the same team.",
     name: "Jamie L.",
     role: "CEO, TechFlow SaaS",
     initials: "JL",
   },
   {
-    quote: "I was the one doing all the lead follow-up. Manually. At 11pm. Shelbie built a system that does it better than I ever did — and I haven't touched a follow-up email in four months.",
+    quote: "I was the one doing all the lead follow-up. Manually. At 11pm. Shelbie built a system that does it better than I ever did, and I haven't touched a follow-up email in four months.",
     name: "Marcus R.",
     role: "Founder, Retail SMB",
     initials: "MR",

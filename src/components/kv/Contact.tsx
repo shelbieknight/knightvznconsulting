@@ -30,7 +30,7 @@ const Contact = () => {
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
               <p className="text-[16px] leading-[1.85] text-muted-foreground mb-10">
-                Tell me what's costing you the most time right now — the follow-up nobody's doing consistently, the tools that should connect but don't. I'll tell you what I'd fix first.
+                Tell me what's costing you the most time right now. The follow-up nobody's doing consistently, the tools that should connect but don't. I'll tell you what I'd fix first.
               </p>
             </AnimatedSection>
 
@@ -166,7 +166,7 @@ const Contact = () => {
                     : "bg-foreground text-background hover:bg-foreground/90 hover:-translate-y-1"
                 }`}
               >
-                {submitted ? "✓ Message received — Shelbie will be in touch!" : (
+                {submitted ? "✓ Message received. Shelbie will be in touch!" : (
                   <>
                     Send Message
                     <svg width="16" height="16" viewBox="0 0 14 14" fill="none">
