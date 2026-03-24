@@ -47,9 +47,9 @@ const Hero = ({ content }: HeroProps) => {
       {/* Grid */}
       <div className="absolute inset-0 geo-grid opacity-[0.03]" />
 
-      <header className="min-h-screen grid grid-cols-1 lg:grid-cols-[1fr_400px] relative pt-[72px] container-kv">
+      <header className="min-h-screen grid grid-cols-1 lg:grid-cols-[1fr_400px] relative pt-[56px] md:pt-[72px] container-kv">
         {/* Left */}
-        <div className="flex flex-col justify-center px-7 md:px-14 lg:px-20 py-16 lg:py-20 relative z-10">
+        <div className="flex flex-col justify-center px-5 md:px-14 lg:px-20 py-12 md:py-16 lg:py-20 relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
