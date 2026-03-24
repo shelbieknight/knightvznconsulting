@@ -2,7 +2,7 @@ import { useState } from "react";
 import AnimatedSection from "./AnimatedSection";
 import { motion } from "framer-motion";
 
-const BOOKING_URL = "https://calendly.com/shelbie-knightvzn/30min";
+const BOOKING_URL = "https://calendly.com/knightvzn";
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
