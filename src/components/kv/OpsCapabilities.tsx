@@ -26,6 +26,12 @@ const opsCards = [
     desc: "Contract signed → tools provisioned, welcome sent, kickoff scheduled, team notified. One trigger, everything handled.",
     tags: ["Triggers", "Sequences", "Templates"],
   },
+  {
+    icon: "📱",
+    title: "Social Media & Content",
+    desc: "LinkedIn, Instagram, Facebook, X, and blog content planned, created, scheduled, and tracked. One system instead of five tabs.",
+    tags: ["LinkedIn", "Instagram", "Facebook", "X", "Blog"],
+  },
 ];
 
 const OpsCapabilities = () => (
