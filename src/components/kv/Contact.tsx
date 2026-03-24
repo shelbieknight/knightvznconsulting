@@ -82,7 +82,7 @@ const Contact = () => {
               <div className="mt-11 p-8 border-2 border-pop/20 bg-pop/[0.03] relative">
                 <div className="absolute top-0 left-0 w-8 h-1" style={{ background: "var(--gradient-primary)" }} />
                 <p className="font-display text-lg font-medium leading-[1.65] text-muted-foreground">
-                  "I keep the client list small on purpose. Every engagement I take on, I'm the one building. Not a junior, not an off-the-shelf process."
+                  "I keep my client list small on purpose. Every engagement I take on, I'm the one building. Not a junior, not an off-the-shelf process."
                 </p>
                 <cite className="font-sans text-[11px] tracking-[0.16em] uppercase text-pop not-italic block mt-4 font-bold">
                   — Shelbie Knight, Founder
