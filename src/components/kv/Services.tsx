@@ -3,7 +3,7 @@ import AnimatedSection from "./AnimatedSection";
 const services = [
   {
     num: "01",
-    title: "AI Marketing Automation Build",
+    title: "Marketing Automation Build",
     desc: "Lead capture, nurture sequences, behavioral triggers, and conversion flows built as a single connected system.",
     tags: ["Lead Nurture", "Behavioral Triggers", "Conversion Flows"],
   },
