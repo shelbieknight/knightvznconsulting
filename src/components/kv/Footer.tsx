@@ -7,9 +7,6 @@ const Footer = () => (
         <img src={kvLogo} alt="KnightVzn logo" className="w-9 h-9 object-contain invert flex-shrink-0" />
         <div>
           <div className="font-display text-lg font-bold text-primary-foreground tracking-wide">KnightVzn</div>
-          <div className="text-[10px] tracking-[0.2em] uppercase text-primary-foreground/40 font-medium">
-            Marketing & Operations Automation
-          </div>
         </div>
       </a>
       <p className="text-[12px] text-primary-foreground/40 lg:text-center font-medium">

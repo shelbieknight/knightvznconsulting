@@ -28,14 +28,9 @@ const Navbar = () => {
     >
       <a href="/" className="flex items-center gap-3 no-underline group">
         <img src={kvLogo} alt="KnightVzn logo" className="w-9 h-9 object-contain invert" />
-        <div className="flex flex-col gap-0">
-          <span className={`font-display text-lg font-bold tracking-wide ${scrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
-            KnightVzn
-          </span>
-          <span className={`text-[9px] uppercase tracking-[0.25em] ${scrolled ? 'text-muted-foreground' : 'text-primary-foreground/40'} font-medium`}>
-            Automation Studio
-          </span>
-        </div>
+        <span className={`font-display text-lg font-bold tracking-wide ${scrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
+          KnightVzn
+        </span>
       </a>
 
       <ul className="hidden md:flex gap-8 list-none m-0 p-0">
