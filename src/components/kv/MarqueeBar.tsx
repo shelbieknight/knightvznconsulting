@@ -4,6 +4,7 @@ const items = [
   "AI Lead Generation",
   "Website Builds",
   "Content & SEO Pipelines",
+  "Social Media Management",
   "CRM Integration",
   "Client Onboarding",
   "Reporting Automation",

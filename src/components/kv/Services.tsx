@@ -21,9 +21,9 @@ const services = [
   },
   {
     num: "04",
-    title: "AI Content & SEO Pipeline",
-    desc: "An AI-assisted pipeline that handles research, drafting, publishing, and tracking.",
-    tags: ["Content Ops", "SEO", "AI Drafting"],
+    title: "Content & SEO Pipeline",
+    desc: "A full content engine covering blog posts, LinkedIn, Instagram, Facebook, and X (Twitter). Research, drafting, publishing, and performance tracking in one pipeline.",
+    tags: ["Blog", "LinkedIn", "Instagram", "Facebook", "X", "SEO"],
   },
   {
     num: "05",
