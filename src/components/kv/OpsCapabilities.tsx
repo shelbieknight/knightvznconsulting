@@ -32,6 +32,12 @@ const opsCards = [
     desc: "LinkedIn, Instagram, Facebook, X, and blog content planned, created, scheduled, and tracked. One system instead of five tabs.",
     tags: ["LinkedIn", "Instagram", "Facebook", "X", "Blog"],
   },
+  {
+    icon: "📧",
+    title: "Email & Calendar Automation",
+    desc: "Meeting scheduling, follow-ups, inbox rules, and email sequences handled without lifting a finger. Less admin, more actual work.",
+    tags: ["Scheduling", "Follow-Ups", "Sequences", "Inbox Rules"],
+  },
 ];
 
 const OpsCapabilities = () => (
