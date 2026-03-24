@@ -36,22 +36,16 @@ const Hero = ({ content }: HeroProps) => {
 
   return (
     <div className="bg-surface-dark relative overflow-hidden">
-      {/* Geometric grid background */}
-      <div className="absolute inset-0 geo-grid opacity-[0.04]" />
-      
-      {/* Large accent circle */}
-      <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 1.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute -right-[300px] -top-[200px] w-[800px] h-[800px] rounded-full border-2 border-pop/[0.08] pointer-events-none hidden lg:block"
+      {/* Gradient orb */}
+      <div className="absolute -right-[200px] -top-[200px] w-[700px] h-[700px] rounded-full opacity-20 blur-[120px] pointer-events-none"
+        style={{ background: "radial-gradient(circle, hsl(var(--pop-glow)), hsl(var(--electric)), transparent)" }}
       />
-      <motion.div
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 0.5 }}
-        transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute -right-[250px] -top-[150px] w-[600px] h-[600px] rounded-full border border-pop/[0.05] pointer-events-none hidden lg:block"
+      <div className="absolute -left-[100px] bottom-[10%] w-[400px] h-[400px] rounded-full opacity-10 blur-[100px] pointer-events-none"
+        style={{ background: "radial-gradient(circle, hsl(var(--electric)), transparent)" }}
       />
+
+      {/* Grid */}
+      <div className="absolute inset-0 geo-grid opacity-[0.03]" />
 
       <header className="min-h-screen grid grid-cols-1 lg:grid-cols-[1fr_400px] relative pt-[72px] container-kv">
         {/* Left */}
@@ -62,7 +56,7 @@ const Hero = ({ content }: HeroProps) => {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="flex items-center gap-3 text-[12px] tracking-[0.2em] uppercase font-semibold mb-10"
           >
-            <span className="w-10 h-[3px] bg-pop" />
+            <span className="w-10 h-[3px]" style={{ background: "var(--gradient-primary)" }} />
             <span className="text-pop">{content.kicker}</span>
           </motion.div>
 
@@ -70,7 +64,7 @@ const Hero = ({ content }: HeroProps) => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display text-[clamp(48px,6vw,88px)] font-bold leading-[0.95] tracking-[-0.03em] text-primary-foreground [&_em]:not-italic [&_em]:text-pop"
+            className="font-display text-[clamp(48px,6vw,88px)] font-bold leading-[0.95] tracking-[-0.03em] text-primary-foreground [&_em]:not-italic [&_em]:text-gradient"
             dangerouslySetInnerHTML={{ __html: content.h1 }}
           />
 
@@ -78,7 +72,8 @@ const Hero = ({ content }: HeroProps) => {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="w-16 h-1 bg-pop my-10 origin-left"
+            className="w-16 h-1 my-10 origin-left"
+            style={{ background: "var(--gradient-primary)" }}
           />
 
           <motion.p
@@ -97,7 +92,8 @@ const Hero = ({ content }: HeroProps) => {
           >
             <a
               href="#work"
-              className="inline-flex items-center gap-3 px-10 py-4 bg-pop text-accent-foreground text-[12px] tracking-[0.14em] uppercase font-bold no-underline hover:bg-pop-dark hover:-translate-y-1 hover:shadow-[0_12px_40px_-8px_hsl(var(--pop)/0.4)] transition-all duration-300 group"
+              className="inline-flex items-center gap-3 px-10 py-4 text-accent-foreground text-[12px] tracking-[0.14em] uppercase font-bold no-underline hover:-translate-y-1 transition-all duration-300 group"
+              style={{ background: "var(--gradient-primary)" }}
             >
               {content.btnPrimary}
               <svg width="16" height="16" viewBox="0 0 14 14" fill="none" className="group-hover:translate-x-1.5 transition-transform duration-300">
@@ -106,7 +102,7 @@ const Hero = ({ content }: HeroProps) => {
             </a>
             <a
               href="#contact"
-              className="text-[12px] tracking-[0.14em] uppercase font-medium text-primary-foreground/50 no-underline flex items-center gap-2 hover:text-pop hover:gap-4 transition-all duration-300"
+              className="text-[12px] tracking-[0.14em] uppercase font-medium text-primary-foreground/50 no-underline flex items-center gap-2 hover:text-electric hover:gap-4 transition-all duration-300"
             >
               {content.btnGhost}
             </a>
@@ -120,9 +116,9 @@ const Hero = ({ content }: HeroProps) => {
           transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="relative overflow-hidden min-h-[60vh] lg:min-h-screen hidden lg:block"
         >
-          {/* Accent border */}
-          <div className="absolute top-0 left-0 bottom-0 w-1 bg-pop z-20" />
-          
+          {/* Gradient accent border */}
+          <div className="absolute top-0 left-0 bottom-0 w-1 z-20" style={{ background: "var(--gradient-primary)" }} />
+
           <img
             src={heroPhoto}
             alt="Shelbie Knight"
@@ -130,7 +126,6 @@ const Hero = ({ content }: HeroProps) => {
             width={640}
             height={960}
           />
-          {/* Dark gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/60 to-transparent" />
 
           {/* Stats */}
@@ -140,7 +135,7 @@ const Hero = ({ content }: HeroProps) => {
               { label: "Systems Built" },
               { label: "Hrs/Wk Saved" },
             ].map((stat, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}

@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 const faqItems = [
   {
     q: "I'm manually doing follow-up, reporting, and onboarding. Is that really automatable?",
-    a: "Yes, and those three specifically come up constantly. Behavioral follow-up sequences, auto-generated reports, deal-triggered onboarding — these are usually the first things built because the ROI is obvious and the time savings show up immediately. Most people who think they're \"not ready for automation\" are already doing 20+ hours a week of work that could be handled automatically.",
+    a: "Yes, and those three specifically come up constantly. Behavioral follow-up sequences, auto-generated reports, deal-triggered onboarding — these are usually the first things built because the ROI is obvious and the time savings show up immediately.",
   },
   {
     q: "My team uses 6 different tools and none of them talk to each other. Can that be fixed?",
-    a: "This comes up in almost every audit. A CRM that doesn't sync with email. A project tool disconnected from billing. Reports that someone has to export and compile manually every week. The fix is connecting those tools and building workflows that handle the transfers automatically.",
+    a: "This comes up in almost every audit. A CRM that doesn't sync with email. A project tool disconnected from billing. The fix is connecting those tools and building workflows that handle the transfers automatically.",
   },
   {
     q: "How quickly will I actually see a difference?",
@@ -21,11 +21,11 @@ const faqItems = [
   },
   {
     q: "I hired an agency before and got a strategy deck. How is this different?",
-    a: "Most agencies give you a strategy deck. KnightVzn gives you a system that's already running. By the end of an engagement, the automation is built, tested, documented, and in production. Shelbie handles the build personally — no junior handoffs.",
+    a: "Most agencies give you a strategy deck. KnightVzn gives you a system that's already running. By the end of an engagement, the automation is built, tested, documented, and in production.",
   },
   {
     q: "What if I don't know where to start with automation?",
-    a: "That's what the Automation Audit is for. The audit goes through everything, figures out what's worth automating and what isn't, and puts it in order of impact. You walk away knowing exactly what to do first.",
+    a: "That's what the Automation Audit is for. The audit goes through everything, figures out what's worth automating and what isn't, and puts it in order of impact.",
   },
 ];
 
@@ -34,12 +34,8 @@ const FAQ = () => {
 
   return (
     <section id="faq" className="section-pad bg-background relative overflow-hidden">
-      {/* Accent stripe */}
-      <div className="absolute top-0 left-0 w-1 h-full bg-pop/10 pointer-events-none" />
-
       <div className="container-kv">
         <div className="grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-16 lg:gap-[80px] items-start">
-          {/* Left sticky */}
           <div className="lg:sticky lg:top-[140px]">
             <AnimatedSection>
               <div className="eyebrow mb-7">Common Questions</div>
@@ -48,7 +44,7 @@ const FAQ = () => {
               <h2 className="font-display text-[clamp(36px,4vw,56px)] font-bold leading-[0.98] tracking-[-0.03em] text-foreground mb-6">
                 Things people ask
                 <br />before they
-                <br /><span className="text-pop">reach out.</span>
+                <br /><span className="text-gradient">reach out.</span>
               </h2>
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
@@ -58,7 +54,6 @@ const FAQ = () => {
             </AnimatedSection>
           </div>
 
-          {/* FAQ list */}
           <div className="flex flex-col">
             {faqItems.map((item, i) => (
               <AnimatedSection key={i} delay={0.05 * i}>

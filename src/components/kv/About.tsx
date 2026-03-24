@@ -20,9 +20,10 @@ const features = [
 
 const About = () => (
   <section id="about" className="section-pad bg-background relative overflow-hidden">
-    {/* Large geometric accent */}
-    <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[500px] h-[500px] border-2 border-pop/[0.06] rotate-45 pointer-events-none hidden lg:block" />
-    <div className="absolute -right-10 top-1/2 -translate-y-[45%] w-[400px] h-[400px] border border-pop/[0.04] rotate-45 pointer-events-none hidden lg:block" />
+    {/* Gradient orb */}
+    <div className="absolute -right-[100px] top-1/3 w-[400px] h-[400px] rounded-full opacity-[0.06] blur-[80px] pointer-events-none"
+      style={{ background: "radial-gradient(circle, hsl(var(--pop)), hsl(var(--electric)), transparent)" }}
+    />
 
     <div className="container-kv">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-[100px] items-start relative z-10">
@@ -35,7 +36,7 @@ const About = () => (
             <h2 className="font-display text-foreground font-bold leading-[0.98] tracking-[-0.03em] text-[clamp(40px,4.5vw,64px)] mb-9">
               Ten years of building
               <br />marketing that{" "}
-              <span className="text-pop">actually runs.</span>
+              <span className="text-gradient">actually runs.</span>
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
@@ -58,11 +59,7 @@ const About = () => (
           {features.map((f, i) => (
             <AnimatedSection key={f.num} delay={0.1 * (i + 1)}>
               <div className="bg-surface-elevated p-8 lg:p-9 border border-border hover:border-pop/30 transition-all cursor-default group card-lift relative overflow-hidden">
-                {/* Accent corner */}
-                <div className="absolute top-0 right-0 w-12 h-12 overflow-hidden">
-                  <div className="absolute top-0 right-0 w-[60px] h-[60px] bg-pop/[0.06] -translate-y-1/2 translate-x-1/2 rotate-45 group-hover:bg-pop/[0.15] transition-colors" />
-                </div>
-                
+                <div className="absolute top-0 left-0 w-1 h-full bg-transparent group-hover:bg-pop transition-colors" />
                 <span className="font-mono text-[11px] text-pop font-bold tracking-[0.15em] mb-3 block">
                   {f.num}
                 </span>

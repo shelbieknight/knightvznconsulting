@@ -26,7 +26,7 @@ const Navbar = () => {
       }`}
     >
       <a href="/" className="flex items-center gap-3 no-underline group">
-        <div className="w-8 h-8 bg-pop flex items-center justify-center">
+        <div className="w-8 h-8 flex items-center justify-center" style={{ background: "var(--gradient-primary)" }}>
           <span className="font-display text-sm font-bold text-accent-foreground">K</span>
         </div>
         <div className="flex flex-col gap-0">
@@ -56,12 +56,12 @@ const Navbar = () => {
 
       <a
         href="#contact"
-        className="hidden md:inline-block bg-pop text-accent-foreground text-[11px] font-bold uppercase tracking-[0.12em] no-underline px-7 py-3 hover:bg-pop-dark hover:-translate-y-0.5 transition-all duration-300 hover:shadow-[0_8px_30px_-6px_hsl(var(--pop)/0.4)]"
+        className="hidden md:inline-block text-accent-foreground text-[11px] font-bold uppercase tracking-[0.12em] no-underline px-7 py-3 hover:-translate-y-0.5 transition-all duration-300 hover:shadow-[0_8px_30px_-6px_hsl(var(--pop)/0.4)]"
+        style={{ background: "var(--gradient-primary)" }}
       >
         Work With Me
       </a>
 
-      {/* Mobile hamburger */}
       <button
         className="md:hidden flex flex-col gap-1.5 bg-transparent border-none cursor-pointer p-2"
         onClick={() => setMobileOpen(!mobileOpen)}
@@ -72,7 +72,6 @@ const Navbar = () => {
         <span className={`block w-5 h-0.5 transition-all ${scrolled ? 'bg-foreground' : 'bg-primary-foreground'} ${mobileOpen ? "-rotate-45 -translate-y-[4px]" : ""}`} />
       </button>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="absolute top-[72px] left-0 right-0 bg-surface-dark border-b border-primary-foreground/10 p-6 flex flex-col gap-4 md:hidden">
           {navLinks.map((link) => (
@@ -87,7 +86,8 @@ const Navbar = () => {
           ))}
           <a
             href="#contact"
-            className="bg-pop text-accent-foreground text-xs font-bold uppercase tracking-widest no-underline px-6 py-3 text-center mt-2"
+            className="text-accent-foreground text-xs font-bold uppercase tracking-widest no-underline px-6 py-3 text-center mt-2"
+            style={{ background: "var(--gradient-primary)" }}
             onClick={() => setMobileOpen(false)}
           >
             Work With Me
