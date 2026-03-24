@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        serif: ['Playfair Display', 'Georgia', 'serif'],
-        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+        display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'Courier New', 'monospace'],
       },
       colors: {
@@ -55,8 +55,10 @@ export default {
         ink: "hsl(var(--ink))",
         mid: "hsl(var(--mid))",
         pale: "hsl(var(--pale))",
-        gold: "hsl(var(--gold))",
-        "gold-dark": "hsl(var(--gold-dark))",
+        pop: "hsl(var(--pop))",
+        "pop-dark": "hsl(var(--pop-dark))",
+        "surface-dark": "hsl(var(--surface-dark))",
+        "surface-elevated": "hsl(var(--surface-elevated))",
       },
       borderRadius: {
         lg: "var(--radius)",
