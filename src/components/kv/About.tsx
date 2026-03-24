@@ -13,8 +13,8 @@ const features = [
   },
   {
     num: "03",
-    title: "AI-Powered Lead Generation",
-    desc: "Targeted outreach, scoring, nurture, and CRM sync — one pipeline that fills itself without manual intervention.",
+    title: "Lead Generation & Websites",
+    desc: "Targeted outreach, scoring, nurture, CRM sync, and high-converting websites — one pipeline from first click to closed deal.",
   },
 ];
 
