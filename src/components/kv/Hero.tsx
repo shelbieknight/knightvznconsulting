@@ -133,7 +133,7 @@ const Hero = ({ content }: HeroProps) => {
             {[
               { label: "Years Exp." },
               { label: "Systems Built" },
-              { label: "Hrs/Wk Saved" },
+              { label: "Avg Hrs/Wk Saved" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
