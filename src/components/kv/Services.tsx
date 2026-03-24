@@ -16,7 +16,7 @@ const services = [
   {
     num: "03",
     title: "AI Lead Generation & Website Builds",
-    desc: "Targeted outreach, lead scoring, nurture sequences, CRM sync, and conversion-ready websites — one end-to-end pipeline from first touch to closed deal.",
+    desc: "Targeted outreach, lead scoring, nurture sequences, CRM sync, and conversion-ready websites. One end-to-end pipeline from first touch to closed deal.",
     tags: ["Outreach", "Lead Scoring", "CRM Sync", "Website Builds"],
   },
   {
