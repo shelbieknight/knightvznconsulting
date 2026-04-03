@@ -50,7 +50,7 @@ const Navbar = () => {
 
       <a
         href="#contact"
-        className="hidden md:inline-block text-accent-foreground text-[11px] font-bold uppercase tracking-[0.12em] no-underline px-7 py-3 hover:-translate-y-0.5 transition-all duration-300 hover:shadow-[0_8px_30px_-6px_hsl(var(--pop)/0.4)]"
+        className={`hidden md:inline-block text-accent-foreground text-[11px] font-bold uppercase tracking-[0.12em] no-underline px-7 py-3 hover:-translate-y-0.5 transition-all duration-300 hover:shadow-[0_8px_30px_-6px_hsl(var(--pop)/0.4)] ${scrolled ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
         style={{ background: "var(--gradient-primary)" }}
       >
         Work With Me
