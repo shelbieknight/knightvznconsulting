@@ -116,9 +116,7 @@
   color: hsl(var(--pop));
 }
 .eyebrow::before {
-  content: '';
-  @apply w-8 h-0.5;
-  background: hsl(var(--pop));
+  display: none;
 }
 
 /* Section spacing */

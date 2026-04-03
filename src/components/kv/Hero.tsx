@@ -115,7 +115,7 @@ const Hero = ({ content }: HeroProps) => {
           <img
             src={heroPhoto}
             alt="Shelbie Knight"
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[340px] h-[70%] object-cover object-top grayscale hover:grayscale-0 transition-all duration-700"
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[340px] h-[70%] object-cover object-top transition-all duration-700"
             width={640}
             height={960}
           />
