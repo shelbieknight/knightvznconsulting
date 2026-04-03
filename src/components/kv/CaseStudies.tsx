@@ -23,7 +23,7 @@ const CaseStudies = ({ cases }: CaseStudiesProps) => (
         </div>
         <AnimatedSection delay={0.15}>
           <p className="text-[16px] leading-[1.8] text-muted-foreground self-end">
-            Real engagements. Specific problems. Measurable outcomes. No hypothetical case studies — these are systems running right now.
+            Real engagements, specific problems, measurable outcomes. No hypothetical case studies. These are systems that are running right now.
           </p>
         </AnimatedSection>
       </div>
