@@ -56,7 +56,7 @@ const Hero = ({ content }: HeroProps) => {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="flex items-center gap-3 text-[12px] tracking-[0.2em] uppercase font-semibold mb-10"
           >
-            <span className="w-10 h-[3px]" style={{ background: "var(--gradient-primary)" }} />
+            
             <span className="text-pop">{content.kicker}</span>
           </motion.div>
 
