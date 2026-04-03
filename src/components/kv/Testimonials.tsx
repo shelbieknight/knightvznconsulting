@@ -20,6 +20,24 @@ const testimonials = [
     role: "COO, Growth Agency",
     initials: "SK",
   },
+  {
+    quote: "I kept saying I'd set up automation once things slowed down. They never did. Shelbie came in, mapped everything in a week, and built the systems in three. Wish I'd done it a year earlier.",
+    name: "Priya R.",
+    role: "Co-Founder, Fintech Startup",
+    initials: "PR",
+  },
+  {
+    quote: "We couldn't prove ROI on half our campaigns because attribution was a mess. Shelbie connected everything (CRM, email, ads) and now we have one clean dashboard. Budget conversations are completely different now.",
+    name: "Aisha L.",
+    role: "VP Marketing, Growth-Stage SaaS",
+    initials: "AL",
+  },
+  {
+    quote: "We were losing account manager hours every week to manual client reporting. Shelbie automated the entire reporting stack. Those hours went straight back to billable work.",
+    name: "Ryan M.",
+    role: "Operations Director, Digital Agency",
+    initials: "RM",
+  },
 ];
 
 const Testimonials = () => (
@@ -32,7 +50,9 @@ const Testimonials = () => (
       <div className="flex items-end justify-between mb-14 lg:mb-[72px]">
         <div>
           <AnimatedSection>
-            <div className="eyebrow mb-7">Client Voices</div>
+            <div className="eyebrow mb-7" style={{ color: "rgba(255,255,255,0.4)" }}>
+              <span style={{ color: "rgba(255,255,255,0.45)" }}>Client Voices</span>
+            </div>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <h2 className="font-display text-[clamp(40px,4.5vw,64px)] font-bold leading-[0.98] tracking-[-0.03em] text-primary-foreground">
@@ -43,7 +63,7 @@ const Testimonials = () => (
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {testimonials.map((t, i) => (
           <AnimatedSection key={i} delay={0.1 * i}>
             <motion.div
@@ -52,12 +72,12 @@ const Testimonials = () => (
               className="bg-primary-foreground/[0.04] border border-primary-foreground/[0.08] p-9 lg:p-10 relative hover:border-pop/30 transition-colors h-full flex flex-col"
             >
               <div className="w-8 h-1 mb-6" style={{ background: "var(--gradient-primary)" }} />
-              <div className="text-pop tracking-[4px] text-sm mb-5 font-bold">★★★★★</div>
+              <div className="text-[#F5C518] tracking-[4px] text-sm mb-5 font-bold">★★★★★</div>
               <p className="text-[15px] leading-[1.75] text-primary-foreground/60 mb-8 relative z-10 flex-1">
                 "{t.quote}"
               </p>
               <div className="flex items-center gap-3.5">
-                <div className="w-11 h-11 flex items-center justify-center font-display text-sm font-bold text-accent-foreground flex-shrink-0" style={{ background: "var(--gradient-primary)" }}>
+                <div className="w-11 h-11 rounded-full flex items-center justify-center font-display text-sm font-bold text-accent-foreground flex-shrink-0" style={{ background: "var(--gradient-primary)" }}>
                   {t.initials}
                 </div>
                 <div>
