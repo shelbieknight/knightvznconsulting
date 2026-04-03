@@ -44,8 +44,6 @@ const Hero = ({ content }: HeroProps) => {
         style={{ background: "radial-gradient(circle, hsl(var(--electric)), transparent)" }}
       />
 
-      {/* Grid */}
-      <div className="absolute inset-0 geo-grid opacity-[0.03]" />
 
       <header className="min-h-screen grid grid-cols-1 lg:grid-cols-[1fr_400px] relative pt-[56px] md:pt-[72px] container-kv">
         {/* Left */}

@@ -100,7 +100,7 @@ const Index = () => {
       <About />
       <AiDemo />
       <Services />
-      <MidPageCTA />
+      
       <OpsCapabilities />
 
       <AnimatePresence mode="wait">
