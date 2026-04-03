@@ -5,37 +5,37 @@ const opsCards = [
   {
     icon: "⚙️",
     title: "Workflow Automation",
-    desc: "Repetitive processes handled automatically: approvals, handoffs, notifications, data entry.",
+    desc: "Approvals, handoffs, notifications, and data entry handled automatically, so your team stops doing work that shouldn't require a human.",
     tags: ["Zapier", "Make", "n8n", "Custom"],
   },
   {
     icon: "🔗",
     title: "Tool Integration",
-    desc: "CRM, project management, billing, email. Connected into one system that syncs automatically.",
+    desc: "CRM, project management, billing, and email connected into one system, so data moves on its own and nothing falls through the gaps.",
     tags: ["CRM Sync", "API", "Webhooks"],
   },
   {
     icon: "📊",
     title: "Automated Reporting",
-    desc: "Pull data from every platform, format it, send it. Automatically. Real-time dashboards nobody has to build.",
+    desc: "Data pulled from every platform, formatted, and sent automatically, so you get the numbers without spending hours building the report.",
     tags: ["Dashboards", "KPIs", "Auto-Send"],
   },
   {
     icon: "🚀",
     title: "Client Onboarding",
-    desc: "Contract signed → tools provisioned, welcome sent, kickoff scheduled, team notified. One trigger, everything handled.",
+    desc: "Contract signed: tools provisioned, welcome sent, kickoff scheduled, team notified. One trigger handles everything so no one has to manage the checklist.",
     tags: ["Triggers", "Sequences", "Templates"],
   },
   {
     icon: "📱",
     title: "Social Media & Content",
-    desc: "LinkedIn, Instagram, Facebook, X, and blog content planned, created, scheduled, and tracked. One system instead of five tabs.",
+    desc: "Content across LinkedIn, Instagram, Facebook, X, and blog planned, created, and scheduled in one pipeline, so you stop managing five tabs to post one thing.",
     tags: ["LinkedIn", "Instagram", "Facebook", "X", "Blog"],
   },
   {
     icon: "📧",
-    title: "Email & Calendar Automation",
-    desc: "Meeting scheduling, follow-ups, inbox rules, and email sequences handled without lifting a finger. Less admin, more actual work.",
+    title: "Calendar Automation",
+    desc: "Meeting scheduling, follow-ups, inbox rules, and email sequences handled automatically, so the admin disappears and the time goes back to work that matters.",
     tags: ["Scheduling", "Follow-Ups", "Sequences", "Inbox Rules"],
   },
 ];
@@ -46,7 +46,7 @@ const OpsCapabilities = () => (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-end mb-16 lg:mb-20">
         <div>
           <AnimatedSection>
-            <div className="eyebrow mb-7">Operations</div>
+            <div className="eyebrow mb-7">Automation Capabilities</div>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <h2 className="font-display text-[clamp(40px,4.5vw,64px)] font-bold leading-[0.98] tracking-[-0.03em] text-foreground">
@@ -58,7 +58,7 @@ const OpsCapabilities = () => (
         </div>
         <AnimatedSection delay={0.15}>
           <p className="text-[16px] leading-[1.8] text-muted-foreground self-end">
-            Most teams don't realize how much time goes to things that could be handled automatically. The audit finds it. The build fixes it.
+            Most teams have normalized hours of repetitive work they stopped questioning. The audit finds it. Sometimes the number surprises people. Then we fix it.
           </p>
         </AnimatedSection>
       </div>

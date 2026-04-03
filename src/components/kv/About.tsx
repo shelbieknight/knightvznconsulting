@@ -3,18 +3,18 @@ import AnimatedSection from "./AnimatedSection";
 const features = [
   {
     num: "01",
-    title: "AI Marketing Automation",
-    desc: "Lead capture, nurture sequences, and behavioral triggers, all built as one connected system that runs 24/7.",
+    title: "Marketing Automation",
+    desc: "Campaigns, nurture sequences, and behavioral triggers built as one connected funnel that runs from first touch to closed deal without you in it.",
   },
   {
     num: "02",
-    title: "Operations Workflow Engine",
-    desc: "Map your manual processes, eliminate repetitive steps, connect your tools into workflows that run themselves.",
+    title: "Operations & Workflows",
+    desc: "Connect your tools, eliminate manual work, and build the backend systems that keep your business running without you in the middle of it.",
   },
   {
     num: "03",
-    title: "Lead Generation & Websites",
-    desc: "Targeted outreach, scoring, nurture, CRM sync, and high-converting websites — one pipeline from first click to closed deal.",
+    title: "AI Strategy & Integration",
+    desc: "Know exactly where AI fits, which tools to use, and how to implement it right so you're not wasting time on the wrong things.",
   },
 ];
 
@@ -30,25 +30,25 @@ const About = () => (
         {/* Left */}
         <div>
           <AnimatedSection>
-            <div className="eyebrow mb-7">About Shelbie</div>
+            <div className="eyebrow mb-7">About Shelbie Knight</div>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <h2 className="font-display text-foreground font-bold leading-[0.98] tracking-[-0.03em] text-[clamp(40px,4.5vw,64px)] mb-9">
-              Ten years of building
-              <br />marketing that{" "}
-              <span className="text-gradient">actually runs.</span>
+              Marketing automation and
+              <br />operations systems that{" "}
+              <span className="text-gradient">actually run.</span>
             </h2>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <div className="flex flex-col gap-5">
               <p className="text-[16px] leading-[1.85] text-muted-foreground">
-                Most marketing systems are held together by manual effort and good intentions. Someone sends the follow-up when they remember to. Someone updates the spreadsheet because nobody else will. The report gets built every Monday because it has to, even though the data already exists in three different tools.
+                <strong className="text-foreground font-semibold">Every project is built personally by me.</strong> No junior handoffs. No strategy decks your team has to figure out alone. You get a system that's running, documented, and done, built by the same person who scoped it.
               </p>
               <p className="text-[16px] leading-[1.85] text-muted-foreground">
-                <strong className="text-foreground font-semibold">I fix that.</strong> I've spent 10+ years building marketing and operations systems that actually run. AI-powered automation, connected workflows, and infrastructure that doesn't depend on someone remembering to do the thing.
+                I've spent 10+ years building marketing and operations systems across startups, SMBs, and agencies. I built the first versions of these systems inside a self-funded startup where the budget didn't exist to hire, so automation wasn't a strategy, it was how we kept up. What I've learned is that most manual work isn't a people problem. It's a systems problem. And most growth problems aren't hiring problems either. They're the same thing. The follow-up that doesn't happen, the tools that don't talk, the report nobody has time to build. Those are fixable.
               </p>
               <p className="text-[16px] leading-[1.85] text-muted-foreground">
-                <strong className="text-foreground font-semibold">Every engagement is built personally by me.</strong> No junior handoffs, no strategy decks your team has to figure out on their own. You get the system, running, documented, and done.
+                <strong className="text-foreground font-semibold">That's what I build.</strong> Connected workflows and infrastructure that runs without someone holding it together.
               </p>
             </div>
           </AnimatedSection>

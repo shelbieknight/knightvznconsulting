@@ -68,13 +68,6 @@ const Hero = ({ content }: HeroProps) => {
             dangerouslySetInnerHTML={{ __html: content.h1 }}
           />
 
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="w-16 h-1 my-10 origin-left"
-            style={{ background: "var(--gradient-primary)" }}
-          />
 
           <motion.p
             initial={{ opacity: 0, y: 24 }}
@@ -133,7 +126,7 @@ const Hero = ({ content }: HeroProps) => {
             {[
               { label: "Years Exp." },
               { label: "Systems Built" },
-              { label: "Avg Hrs/Wk Saved" },
+              { label: "Hrs Saved / Mo / Client" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
