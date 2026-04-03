@@ -12,7 +12,7 @@ const CaseStudies = ({ cases }: CaseStudiesProps) => (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-end mb-14 lg:mb-[72px]">
         <div>
           <AnimatedSection>
-            <div className="eyebrow mb-7">Results</div>
+            <div className="eyebrow mb-7">Client Results</div>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <h2 className="font-display text-[clamp(40px,4.5vw,64px)] font-bold leading-[0.98] tracking-[-0.03em] text-foreground">
