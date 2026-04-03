@@ -1,7 +1,7 @@
 import AnimatedSection from "./AnimatedSection";
 
 const AiDemo = () => (
-  <section id="ai-demo" className="section-pad bg-surface-dark relative overflow-hidden">
+  <section id="process" className="section-pad bg-surface-dark relative overflow-hidden">
     {/* Gradient orbs */}
     <div className="absolute right-[10%] top-[20%] w-[350px] h-[350px] rounded-full opacity-[0.07] blur-[100px] pointer-events-none"
       style={{ background: "radial-gradient(circle, hsl(var(--pop)), transparent)" }}
@@ -11,7 +11,9 @@ const AiDemo = () => (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-[80px] items-center">
         <div>
           <AnimatedSection>
-            <div className="eyebrow mb-7">How It Works</div>
+            <div className="eyebrow mb-7" style={{ color: "rgba(255,255,255,0.4)" }}>
+              <span style={{ color: "rgba(255,255,255,0.4)" }}>The Time Recovery System</span>
+            </div>
           </AnimatedSection>
           <AnimatedSection delay={0.1}>
             <h2 className="font-display text-[clamp(38px,4vw,60px)] font-bold leading-[0.98] tracking-[-0.03em] text-primary-foreground mb-6">
@@ -21,7 +23,7 @@ const AiDemo = () => (
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <p className="text-[16px] leading-[1.85] text-primary-foreground/50 mb-10">
-              Every engagement starts with a full audit. I map your marketing funnel, your operations, every manual step your team is taking. Then I build the systems that eliminate the repetitive work. The typical timeline is 2–6 weeks from audit to live systems.
+              Every project starts with a full audit. I map your marketing funnel, your operations, every manual step your team is taking. Then I build the systems that eliminate the repetitive work. The typical timeline is 2–6 weeks from audit to live systems.
             </p>
           </AnimatedSection>
           <AnimatedSection delay={0.3}>
@@ -49,9 +51,6 @@ const AiDemo = () => (
         <AnimatedSection delay={0.15}>
           <div className="overflow-hidden border border-primary-foreground/10 shadow-[0_40px_100px_-20px_hsl(var(--pop)/0.15)]">
             <div className="px-5 py-3.5 flex items-center gap-2 border-b border-primary-foreground/[0.06]" style={{ background: "linear-gradient(135deg, hsl(222 47% 8%), hsl(222 40% 12%))" }}>
-              <span className="w-3 h-3 rounded-full bg-pop/80" />
-              <span className="w-3 h-3 rounded-full bg-electric/50" />
-              <span className="w-3 h-3 rounded-full bg-primary-foreground/20" />
               <span className="flex-1 text-center font-mono text-[11px] text-primary-foreground/30 tracking-[0.1em] font-medium">
                 knightvzn — automation-audit
               </span>
@@ -71,10 +70,10 @@ const AiDemo = () => (
                 <span className="text-primary-foreground/80 font-medium">Automation Opportunities Found:</span>
               </div>
               <div className="text-primary-foreground/25 text-xs">
-                &nbsp;&nbsp;• Lead nurture pipeline: save ~18 hrs/wk
+                &nbsp;&nbsp;• Lead nurture pipeline: save ~18 hrs/mo
               </div>
               <div className="text-primary-foreground/25 text-xs">
-                &nbsp;&nbsp;• Ops workflows: save ~24 hrs/wk
+                &nbsp;&nbsp;• Ops workflows: save ~24 hrs/mo
               </div>
               <div className="text-primary-foreground/25 text-xs">
                 &nbsp;&nbsp;• Content + reporting: 10× output

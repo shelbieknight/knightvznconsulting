@@ -8,6 +8,7 @@ export interface CaseStudy {
 
 export interface PersonaContent {
   kicker: string;
+  faqHint: string;
   h1: string;
   desc: string;
   btnPrimary: string;
@@ -17,9 +18,10 @@ export interface PersonaContent {
 
 export const personaData: Record<string, PersonaContent> = {
   default: {
-    kicker: "AI Marketing · Operations · Lead Generation",
+    kicker: "Marketing · Operations · AI Strategy",
+    faqHint: "",
     h1: "Your business<br/>shouldn't run<br/><em>on manual.</em>",
-    desc: "I'm <strong>Shelbie Knight</strong>. If you're still the one doing follow-up by hand, your tools don't talk to each other, and half your week goes to work that should happen automatically, that's what I fix. I build <strong>AI-powered marketing and operations systems</strong> so the business runs without you in the middle of it.",
+    desc: "Most businesses run on a mix of good intentions and manual work. The follow-up that gets missed. The report nobody has time to build. The onboarding that still takes three people. I'm <strong>Shelbie Knight</strong> and I build the <strong>systems that replace all of it</strong>, so the business can grow without the workload growing with it.",
     btnPrimary: "See the Results",
     btnGhost: "Find Out What I'd Automate First →",
     cases: [
@@ -48,8 +50,9 @@ export const personaData: Record<string, PersonaContent> = {
   },
   startup: {
     kicker: "For Startup Founders · Scale Without Headcount",
+    faqHint: "Most asked by founders: How quickly will I get time back?",
     h1: "You're the one<br/>doing it all.<br/><em>That's the problem.</em>",
-    desc: "I'm <strong>Shelbie Knight</strong>. You're building a company and running all its systems at the same time. Manually following up on leads, onboarding clients, pulling reports. I build <strong>AI-powered marketing and operations systems</strong> that handle that work automatically, so you can get your time back without hiring for every problem.",
+    desc: "You didn't start a company to spend your evenings doing follow-up. And you can't hire your way out of it yet. I'm <strong>Shelbie Knight</strong>. I build the <strong>automation that gets founders out of the operations grind</strong>, so you grow the company without growing the team before you're ready.",
     btnPrimary: "See What I've Built for Founders",
     btnGhost: "Find Out What I'd Automate First →",
     cases: [
@@ -78,8 +81,9 @@ export const personaData: Record<string, PersonaContent> = {
   },
   smbs: {
     kicker: "For SMB Owners · Operations That Run Themselves",
+    faqHint: "Most asked by SMB owners: Can you actually connect all our tools?",
     h1: "Your business runs<br/>on your team's<br/><em>manual effort.</em>",
-    desc: "I'm <strong>Shelbie Knight</strong>. Your team is doing work that systems should be handling. Tools that don't connect, reports someone pulls every week, onboarding that requires three people every time. I build <strong>AI-powered operations and marketing automation</strong> that gives your team their time back.",
+    desc: "Your team is capable. They're just spending too much time on work that systems should be handling. Reports pulled manually every week, tools that don't connect, onboarding that takes three people every time. I'm <strong>Shelbie Knight</strong> and I build the <strong>infrastructure that fixes that</strong>, so your team can do more without needing more people to do it.",
     btnPrimary: "See How It Works for SMBs",
     btnGhost: "Find Out What I'd Automate First →",
     cases: [
@@ -91,11 +95,11 @@ export const personaData: Record<string, PersonaContent> = {
         metricLabel: "Saved Per Week",
       },
       {
-        tag: "Operations Automation · SMB (38 employees)",
-        title: "Team Got 22 Hours Back Per Week After Tool Integration",
-        desc: "Four tools that had never been connected. Someone was manually moving data between all of them every single day. Connected the full stack and automated the data flows.",
-        metric: "22h",
-        metricLabel: "Saved Per Week",
+        tag: "Marketing Automation · SMB Retail (52 employees)",
+        title: "Abandoned Cart Recovery System Added $94K in Annual Revenue",
+        desc: "The marketing team had no automated recovery for cart abandons or inactive customers. Built a behavioral email system with three-stage sequences and dynamic product logic. Recovered revenue that was previously walking out the door.",
+        metric: "$94K",
+        metricLabel: "Revenue Recovered",
       },
       {
         tag: "Operations Audit · SMB Service Business",
@@ -108,8 +112,9 @@ export const personaData: Record<string, PersonaContent> = {
   },
   marketing: {
     kicker: "For Marketing Teams · Strategy + Automation · Prove Your ROI",
+    faqHint: "Most asked by marketing managers: How fast can we automate reporting?",
     h1: "Your team is doing<br/>execution work.<br/><em>Strategy is suffering.</em>",
-    desc: "I'm <strong>Shelbie Knight</strong>. Your team is smart and capable, but they're spending most of their time on manual follow-up, rebuilding the same reports, and managing campaigns that should run themselves. I build the <strong>marketing systems and strategy</strong> that free your team to do the work that actually moves the business.",
+    desc: "Your team is doing the work. The problem is you can't prove it because reporting is manual, attribution is broken, and half the week goes to execution that should run itself. I'm <strong>Shelbie Knight</strong>. I build the <strong>systems that free your team and give you the data to defend your budget</strong>, so you can deliver more without the ask for more headcount.",
     btnPrimary: "See What I've Built for Marketing Teams",
     btnGhost: "Find Out What I'd Automate First →",
     cases: [
@@ -138,8 +143,9 @@ export const personaData: Record<string, PersonaContent> = {
   },
   agencies: {
     kicker: "For Agencies · Scalable Client Delivery",
+    faqHint: "Most asked by agencies: Will clients need to be involved during the build?",
     h1: "Your agency scales<br/>on people. It should<br/><em>scale on systems.</em>",
-    desc: "I'm <strong>Shelbie Knight</strong>. Every new client means another manual onboarding, another reporting setup, another set of handoffs. I build <strong>AI-powered operations and delivery automation</strong> for agencies: standardized onboarding, automated client reporting, and the operational infrastructure that lets you take on more clients without burning out your team.",
+    desc: "Every new client adds work that shouldn't require your team's hands. Another onboarding. Another reporting setup. Another set of handoffs. Right now your revenue scales with your headcount. I'm <strong>Shelbie Knight</strong> and I build the <strong>delivery automation that breaks that pattern</strong>, so you take on more clients without taking on more staff.",
     btnPrimary: "See the Agency Builds",
     btnGhost: "Find Out What I'd Automate First →",
     cases: [
