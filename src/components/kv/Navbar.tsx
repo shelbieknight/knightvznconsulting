@@ -27,7 +27,7 @@ const Navbar = () => {
       }`}
     >
       <a href="/" className="flex items-center gap-3 no-underline group">
-        <img src={kvLogo} alt="KnightVzn logo" className="w-9 h-9 object-contain invert" />
+        <img src={kvLogo} alt="KnightVzn logo" className={`w-9 h-9 object-contain transition-all duration-300 ${scrolled ? '' : 'invert'}`} />
         <span className={`font-display text-lg font-bold tracking-wide ${scrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
           KnightVzn
         </span>
