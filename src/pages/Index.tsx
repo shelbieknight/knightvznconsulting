@@ -114,7 +114,7 @@ const Index = () => {
         </motion.div>
       </AnimatePresence>
 
-      <FAQ />
+      <FAQ faqHint={content.faqHint} />
       <Testimonials />
       <Contact />
       <Footer />

@@ -7,7 +7,7 @@ interface CaseStudiesProps {
 }
 
 const CaseStudies = ({ cases }: CaseStudiesProps) => (
-  <section id="work" className="section-pad bg-background relative overflow-hidden">
+  <section id="work" className="section-pad bg-background relative overflow-hidden border-t border-border">
     <div className="container-kv relative z-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-end mb-14 lg:mb-[72px]">
         <div>
