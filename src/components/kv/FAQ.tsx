@@ -4,6 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const BOOKING_URL = "https://calendly.com/shelbieknight";
 
+interface FAQProps {
+  faqHint?: string;
+}
+
 const faqItems = [
   {
     q: "Can you automate follow-up, reporting, and client onboarding?",
@@ -43,7 +47,7 @@ const faqItems = [
   },
 ];
 
-const FAQ = () => {
+const FAQ = ({ faqHint }: FAQProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -54,6 +58,11 @@ const FAQ = () => {
             <AnimatedSection>
               <div className="eyebrow mb-7">FAQ</div>
             </AnimatedSection>
+            {faqHint && (
+              <p className="text-[13px] text-primary-foreground/40 italic mt-2 mb-0 min-h-[20px]">
+                {faqHint}
+              </p>
+            )}
             <AnimatedSection delay={0.1}>
               <h2 className="font-display text-[clamp(36px,4vw,56px)] font-bold leading-[0.98] tracking-[-0.03em] text-foreground mb-6">
                 Questions people ask
