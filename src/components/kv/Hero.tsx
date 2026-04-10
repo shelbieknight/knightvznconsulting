@@ -45,16 +45,15 @@ const Hero = ({ content }: HeroProps) => {
       />
 
 
-      <header className="min-h-screen grid grid-cols-1 lg:grid-cols-[1fr_400px] relative pt-[56px] md:pt-[72px] container-kv">
+      <header className="lg:min-h-screen grid grid-cols-1 lg:grid-cols-[1fr_400px] relative pt-[56px] md:pt-[72px] container-kv">
         {/* Left */}
-        <div className="flex flex-col justify-center px-5 md:px-14 lg:px-20 py-12 md:py-16 lg:py-20 relative z-10">
+        <div className="flex flex-col justify-start px-5 md:px-14 lg:px-20 py-9 md:py-16 lg:py-20 relative z-10">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="flex items-center gap-3 text-[12px] tracking-[0.2em] uppercase font-semibold mb-10"
+            className="flex items-center gap-3 text-[10px] lg:text-[12px] tracking-[0.2em] uppercase font-semibold mb-[18px] lg:mb-10"
           >
-            
             <span className="text-pop">{content.kicker}</span>
           </motion.div>
 
@@ -62,16 +61,15 @@ const Hero = ({ content }: HeroProps) => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="font-display text-[clamp(48px,6vw,88px)] font-bold leading-[0.95] tracking-[-0.03em] text-primary-foreground [&_em]:not-italic [&_em]:text-gradient"
+            className="font-display text-[clamp(34px,7vw,64px)] lg:text-[clamp(48px,5.4vw,76px)] font-bold leading-[1.0] lg:leading-[0.95] tracking-[-0.03em] text-primary-foreground [&_em]:not-italic [&_em]:text-gradient"
             dangerouslySetInnerHTML={{ __html: content.h1 }}
           />
-
 
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="text-lg leading-[1.8] text-primary-foreground/60 max-w-[520px] [&_strong]:text-primary-foreground [&_strong]:font-semibold"
+            className="text-base lg:text-lg leading-[1.7] lg:leading-[1.8] text-primary-foreground/60 max-w-[520px] mt-7 [&_strong]:text-primary-foreground [&_strong]:font-semibold"
             dangerouslySetInnerHTML={{ __html: content.desc }}
           />
 
@@ -79,11 +77,11 @@ const Hero = ({ content }: HeroProps) => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.85, ease: [0.16, 1, 0.3, 1] }}
-            className="flex gap-6 items-center mt-12 lg:mt-14 flex-wrap"
+            className="flex gap-4 lg:gap-6 items-center mt-7 lg:mt-14 flex-wrap"
           >
             <a
               href="#work"
-              className="inline-flex items-center gap-3 px-10 py-4 text-accent-foreground text-[12px] tracking-[0.14em] uppercase font-bold no-underline hover:-translate-y-1 transition-all duration-300 group"
+              className="inline-flex items-center gap-3 px-7 lg:px-10 py-3.5 lg:py-4 text-accent-foreground text-[11px] lg:text-[12px] tracking-[0.14em] uppercase font-bold no-underline hover:-translate-y-1 transition-all duration-300 group"
               style={{ background: "var(--gradient-primary)" }}
             >
               {content.btnPrimary}
@@ -92,24 +90,23 @@ const Hero = ({ content }: HeroProps) => {
               </svg>
             </a>
             <a
-              href="#contact"
-              className="text-[12px] tracking-[0.14em] uppercase font-medium text-primary-foreground/50 no-underline flex items-center gap-2 hover:text-electric hover:gap-4 transition-all duration-300"
+              href="https://calendly.com/shelbieknight"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[12px] tracking-[0.14em] uppercase font-medium text-primary-foreground/50 lg:text-primary-foreground/50 no-underline flex items-center gap-2 hover:text-electric hover:gap-4 transition-all duration-300"
             >
               {content.btnGhost}
             </a>
           </motion.div>
         </div>
 
-        {/* Right — Photo Panel */}
+        {/* Right — Photo Panel (desktop only) */}
         <motion.div
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="relative overflow-hidden min-h-[60vh] lg:min-h-screen hidden lg:block"
         >
-          {/* Gradient accent border */}
-          <div className="absolute top-0 left-0 bottom-0 w-1 z-20" style={{ background: "var(--gradient-primary)" }} />
-
           <img
             src={heroPhoto}
             alt="Shelbie Knight"
@@ -156,6 +153,42 @@ const Hero = ({ content }: HeroProps) => {
           </div>
         </motion.div>
       </header>
+
+      {/* Mobile hero panel (visible ≤1024px) */}
+      <div className="lg:hidden overflow-hidden">
+        <img
+          src={heroPhoto}
+          alt="Shelbie Knight"
+          className="w-full max-h-[480px] h-[480px] object-cover object-[50%_0%] block"
+        />
+        <div className="flex justify-between gap-0 px-5 py-6 bg-surface-dark border-t border-primary-foreground/[0.08] border-b border-b-primary-foreground/[0.08]">
+          {[
+            { num: "10+", label: "Years Exp." },
+            { num: "150+", label: "Systems Built" },
+            { num: "42", label: "Hrs Saved / Mo" },
+          ].map((stat, i) => (
+            <div
+              key={i}
+              className={`flex flex-col items-center flex-1 ${i > 0 ? "border-l border-primary-foreground/[0.08]" : ""}`}
+            >
+              <span className="font-display text-[32px] font-bold text-primary-foreground leading-none metric-glow">
+                {stat.num}
+              </span>
+              <span className="text-[10px] tracking-[0.15em] uppercase text-primary-foreground/40 mt-1.5 font-semibold text-center">
+                {stat.label}
+              </span>
+            </div>
+          ))}
+        </div>
+        <div className="px-5 py-3 pb-5 bg-surface-dark relative z-[1]">
+          <div className="font-display text-lg font-bold text-primary-foreground">
+            Shelbie Knight
+          </div>
+          <div className="text-[10px] tracking-[0.18em] uppercase text-pop font-semibold mt-0.5">
+            Marketing & Operations Automation
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
