@@ -92,7 +92,9 @@ const Hero = ({ content }: HeroProps) => {
               </svg>
             </a>
             <a
-              href="#contact"
+              href="https://calendly.com/shelbieknight"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-[12px] tracking-[0.14em] uppercase font-medium text-primary-foreground/50 no-underline flex items-center gap-2 hover:text-electric hover:gap-4 transition-all duration-300"
             >
               {content.btnGhost}
@@ -107,8 +109,7 @@ const Hero = ({ content }: HeroProps) => {
           transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="relative overflow-hidden min-h-[60vh] lg:min-h-screen hidden lg:block"
         >
-          {/* Gradient accent border */}
-          <div className="absolute top-0 left-0 bottom-0 w-1 z-20" style={{ background: "var(--gradient-primary)" }} />
+
 
           <img
             src={heroPhoto}
