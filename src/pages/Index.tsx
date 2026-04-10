@@ -122,6 +122,7 @@ const Index = () => {
       </section>
 
 
+      <AiDemo />
       <Services />
       
       <OpsCapabilities />
