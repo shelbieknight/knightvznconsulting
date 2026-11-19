@@ -4,9 +4,13 @@ import Contact from "@/components/kv/Contact";
 import Footer from "@/components/kv/Footer";
 import AnimatedSection from "@/components/kv/AnimatedSection";
 
+// Where the "Get it free" button goes: the Web3Forms sign-up page for Agent Scout Lite.
+// After the form is submitted, send people to /downloads/agent-scout-lite.zip
+const AGENT_SCOUT_LITE_URL = "/agent-scout-lite";
+
 type Project = {
   id: string;
-  kind: "Prototype" | "Client build" | "Proposal" | "KnightVzn";
+  kind: "Prototype" | "Client build" | "Proposal" | "KnightVzn" | "Free tool";
   title: string;
   industry: string;
   summary: string;
@@ -125,11 +129,24 @@ const otherWork: Project[] = [
   },
 ];
 
+const agentScoutLite: Project = {
+  id: "agent-scout-lite",
+  kind: "Free tool",
+  title: "Agent Scout Lite",
+  industry: "Claude skill",
+  summary: "",
+  problem: "",
+  built: [],
+  decisions: "",
+  stack: "Claude skill (SKILL.md)",
+};
+
 const tagClass: Record<Project["kind"], string> = {
   Prototype: "text-pop border-pop/30 bg-pop/[0.06]",
   "Client build": "text-electric border-electric/20 bg-electric/[0.06]",
   Proposal: "text-electric border-electric/20 bg-electric/[0.06]",
   KnightVzn: "text-muted-foreground border-border bg-transparent",
+  "Free tool": "text-pop border-pop/30 bg-pop/[0.06]",
 };
 
 const Tag = ({ kind }: { kind: Project["kind"] }) => (
@@ -164,7 +181,7 @@ const Work = () => {
     else window.scrollTo(0, 0);
   }, []);
 
-  const all = [...prototypes, ...otherWork];
+  const all = [...prototypes, agentScoutLite, ...otherWork];
 
   return (
     <div className="bg-background text-foreground">
@@ -277,6 +294,52 @@ const Work = () => {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Free tool */}
+      <section className="px-4 md:px-10 lg:px-20 pb-16 md:pb-24 bg-background">
+        <div className="container-kv">
+          <article
+            id="agent-scout-lite"
+            className="scroll-mt-24 grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-8 lg:gap-12 p-6 md:p-10 bg-surface-dark border border-primary-foreground/[0.08]"
+          >
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-center gap-3">
+                <Tag kind="Free tool" />
+                <span className="text-[11px] tracking-[0.14em] uppercase text-primary-foreground/50 font-semibold">Claude skill · Free download</span>
+              </div>
+              <h2 className="font-display text-[clamp(28px,3vw,40px)] font-bold leading-tight tracking-[-0.02em] text-primary-foreground mt-5">
+                Agent Scout Lite
+              </h2>
+              <p className="text-[16px] leading-[1.75] text-primary-foreground/70 mt-3 max-w-[60ch]">
+                A lighter version of the review I run for my own clients, packaged as a Claude skill you can install. Point it at one Claude project and it reads the chats, files and memory, finds the work that keeps getting done by hand, and ranks which agents are worth building first.
+              </p>
+              <ul className="pl-4 m-0 mt-6 flex flex-col gap-2 list-disc">
+                <li className="text-[14px] leading-[1.6] text-primary-foreground/60">Up to 5 agent ideas, each with the evidence behind it</li>
+                <li className="text-[14px] leading-[1.6] text-primary-foreground/60">Hours saved per month, difficulty, and the approval step for each</li>
+                <li className="text-[14px] leading-[1.6] text-primary-foreground/60">Read-only: it never sends, edits or schedules anything</li>
+              </ul>
+            </div>
+            <div className="flex flex-col gap-4 lg:border-l lg:border-primary-foreground/[0.08] lg:pl-12 justify-center">
+              <p className="text-[14px] leading-[1.7] text-primary-foreground/60">
+                Want it running every month instead? The full Agent Scout adds scheduled reviews, health checks on the agents you already run, independent QA, and a ready-to-paste setup prompt for each agent.
+              </p>
+              <a
+                href={AGENT_SCOUT_LITE_URL}
+                className="inline-flex items-center justify-center gap-2 text-accent-foreground text-[11px] font-bold uppercase tracking-[0.12em] no-underline px-6 py-3.5 transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_30px_-6px_hsl(var(--pop)/0.4)]"
+                style={{ background: "var(--gradient-primary)" }}
+              >
+                Get it free →
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center gap-2 text-primary-foreground border border-primary-foreground/15 hover:border-pop/40 text-[11px] font-bold uppercase tracking-[0.12em] no-underline px-6 py-3.5 transition-all"
+              >
+                Ask about the full version
+              </a>
+            </div>
+          </article>
         </div>
       </section>
 
