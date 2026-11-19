@@ -63,6 +63,20 @@ const CaseStudies = ({ cases }: CaseStudiesProps) => (
           </AnimatedSection>
         ))}
       </div>
+
+      <AnimatedSection delay={0.2}>
+        <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-border pt-8">
+          <p className="text-[15px] text-muted-foreground">
+            Want to see how I build? Open the prototypes and case studies.
+          </p>
+          <a
+            href="/work"
+            className="inline-flex items-center gap-2 text-foreground border border-border hover:border-pop/40 text-[11px] font-bold uppercase tracking-[0.12em] no-underline px-6 py-3 transition-all self-start sm:self-auto"
+          >
+            See all work →
+          </a>
+        </div>
+      </AnimatedSection>
     </div>
   </section>
 );
