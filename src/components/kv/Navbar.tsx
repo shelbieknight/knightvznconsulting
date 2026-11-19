@@ -2,10 +2,10 @@ import { useState, useEffect } from "react";
 import kvLogo from "@/assets/kv-logo.png";
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "FAQ", href: "#faq" },
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Work", href: "/work" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 const Navbar = () => {

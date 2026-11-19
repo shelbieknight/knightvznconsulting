@@ -17,7 +17,7 @@ const Footer = () => (
         {["About", "Services", "Work", "Contact"].map((link) => (
           <a
             key={link}
-            href={`#${link.toLowerCase()}`}
+            href={link === "Work" ? "/work" : `/#${link.toLowerCase()}`}
             className="text-[11px] tracking-[0.12em] uppercase text-primary-foreground/40 hover:text-pop no-underline transition-colors font-semibold"
           >
             {link}
